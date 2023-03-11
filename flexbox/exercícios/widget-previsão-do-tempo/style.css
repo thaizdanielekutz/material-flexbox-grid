@@ -84,4 +84,11 @@ html {
   .weather {
     flex-direction: column;
   }
+  .weather > div {
+    margin: 10px 0;
+  }
+
+  .weather_period {
+    flex-basis: 100px;
+  }
 }
