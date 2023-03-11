@@ -40,7 +40,7 @@ html {
 
 .img {
   background-size: cover;
-  height: 20vw;
+  height: 10vw;
 }
 
 .weather_min {
@@ -49,4 +49,39 @@ html {
 
 .weather_min::after {
   content: "-";
+}
+
+@media (min-width: 600px) {
+  .weather {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .weather > div {
+    margin: 0 30px;
+  }
+  .weather_period {
+    font-size: 1.5rem;
+    min-width: 50px;
+    text-align: left;
+  }
+  .weather_minmax {
+    display: flex;
+    flex-direction: column;
+  }
+  .weather_min::after {
+    content: "";
+  }
+}
+
+@media (min-width: 900px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .weather {
+    flex-direction: column;
+  }
 }
