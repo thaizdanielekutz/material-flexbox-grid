@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 200px);
+  /*
+  ------------------------------------------
+  função minmax
+  ------------------------------------------
+  grid-template-columns: minmax(200px, 40%) 200px 200px;
+  ------------------------------------------
+  função fracionária
+  ------------------------------------------
+  grid-template-columns: 1fr 1fr 1fr;
+  ------------------------------------------
+  */
+  grid-gap: 10px;
+}
+.wrapper > div {
+  background-color: royalblue;
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+.wrapper > div:nth-child(1) {
+  /*
+------------------------------------
+preenchimento de espaço - início/fim
+------------------------------------
+  grid-column-start: 1;
+  grid-column-end: 3;
+  */
+  /*
+  ----------------------------------
+  preenchimento de espaço - geral
+  ----------------------------------
+  grid-column: 1 / 3;
+  */
+  grid-column: 1 / 3;
+}
+
+.wrapper > div:nth-child(even) {
+  background-color: skyblue;
+}

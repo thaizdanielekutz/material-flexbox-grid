@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-gap: 10px;
+  /*
+  ESPAÇAMENTO DE GRID - COLUMAS E LINHA 
+  -----------------------------------------
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  -----------------------------------------
+  */
+  /*
+  -----------------------------------------
+  especifica o tamanho das linhas
+  grid-template-rows: 200px 200px 200px;
+  -----------------------------------------
+  */
+  grid-auto-rows: 200px;
+}
+
+.wrapper div {
+  background-color: royalblue;
+  padding: 1rem;
+}
+
+.wrapper div:nth-child(even) {
+  background-color: skyblue;
+}
