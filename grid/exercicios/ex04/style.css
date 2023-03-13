@@ -2,7 +2,8 @@
 
 .wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+
+  grid-template-columns: 200px 200px 200px;
   /*
   ------------------------------------------
   função minmax
@@ -16,6 +17,18 @@
   */
   grid-gap: 10px;
   grid-auto-rows: 200px;
+
+  /*
+  ----------------------------
+  alinhamento vertical
+  ----------------------------
+  align-items: end;*/
+  /*
+  ----------------------------
+  alinhamento horizontal
+  ----------------------------
+  justify-items: center;
+  */
 }
 .wrapper div {
   background-color: royalblue;
@@ -24,4 +37,16 @@
 
 .wrapper div:nth-child(even) {
   background-color: skyblue;
+}
+
+.wrapper > div:nth-child(2) {
+  align-self: center;
+  justify-self: center;
+  /*
+  --------------------------------
+  alinhamento específíco
+  --------------------------------
+  align-self: center;
+  justify-self: center;
+  */
 }
